@@ -35,9 +35,9 @@ Ci-dessous, un exemple minimaliste dont nous expliquerons les détails plus loin
 
 Le langage possède les basiques suivants :
 
-- {% … %} pour créer des Statements
-- {{ … }} pour déclarer des expressions/variables à afficher dans le rendu
-- {# … #} pour les commentaires qui ne seront pas affichés dans le rendu
+- '{% … %}' pour créer des Statements
+- '{{ … }}' pour déclarer des expressions/variables à afficher dans le rendu
+- '{# … #}' pour les commentaires qui ne seront pas affichés dans le rendu
 
 Dans l’exemple ci-dessus, le petit template Jinja2 possède un commentaire suivi d’une boucle FOR qui permet de générer la création de VLAN pour chaque VLAN ID trouvé dans un objet python créé dans l’application utilisant Jinja2.
 Dans l’exemple ci-dessous, on utilise une liste :
