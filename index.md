@@ -1,4 +1,6 @@
-## Welcome to GitHub Pages
+## Bienvenue sur NetDevOps.fr
+
+Un site de partage de connaissances sur les sujets DevOps, Réseaux et automatisation des infrastructures IT.
 
 You can use the [editor on GitHub](https://github.com/brunohaon/netdevops.fr/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
