@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Ansible – vars-prompt – Partie 1"
 ---
 

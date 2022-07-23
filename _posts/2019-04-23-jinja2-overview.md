@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Jinja2 Overview !"
 ---
 

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Le filtre 'ip address' de Jinja 2 sous Ansible"
 ---
 

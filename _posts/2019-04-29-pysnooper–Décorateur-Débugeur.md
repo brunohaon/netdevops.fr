@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "PySnooper – Décorateur Débugeur"
 ---
 

@@ -52,9 +52,9 @@ BGP table version is 9, main routing table version 9
 BGP using 1144 total bytes of memory
 BGP activity 12/4 prefixes, 12/4 paths, scan interval 5 secs
 
-Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
-192.0.2.77      4 65551    6965    1766        9    0    0  5w4d           1
-192.0.2.78      4 65552    6965    1766        9    0    0  5w4d          10
+`Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd`
+`192.0.2.77      4 65551    6965    1766        9    0    0  5w4d           1`
+`192.0.2.78      4 65552    6965    1766        9    0    0  5w4d          10`
 
 Avec le Template suivant :
 

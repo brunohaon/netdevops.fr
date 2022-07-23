@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "YAML Overview !"
 ---
 
@@ -53,4 +52,3 @@ Il est possible de représenter des hiérarchies plus complexes avec des indenta
 `          - vlan200`
 `          - vlan250`
 `          - GigabitEthernet1/0/10`
- 
