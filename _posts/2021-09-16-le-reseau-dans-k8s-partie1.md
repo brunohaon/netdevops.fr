@@ -22,7 +22,7 @@ Des ressources sont installées sur le Node, telles que des Workloads, des Servi
 La plus petite entité possédant une IP dans K8s est le POD. Nous appellerons l’adresse IP associée POD-IP.
 Le Pod peut être composé de plusieurs containers, partageant l’IP POD-IP, en utilisant des ports UDP/TCP différents pour exploiter le Multiplexing.
 
-![POD IP](assets/img/Diapositive2.jpeg)
+![POD IP]({{site.baseurl}}/assets/img/Diapositive2.jpeg)
 
 Dans le monde des containers, à l’inverse de nos infrastructures legacy, le workload n’est pas forcément fait pour rester UP and Running 24/24 – 7/7.
 Avec le déploiement continue, la durée de vie d’un container peut s’avérer être très éphémère.
@@ -32,7 +32,7 @@ Le DNS interne de K8s doit s’appuyer sur une IP durable pour permettre une ré
 Les Pods utilisent donc une couche d’abstraction : les Services.
 Les services représentent une VIP (nous l’appellerons SVC-IP) et sont des Load Balancers qui distribuent le trafic vers les POD-IP des pods concernés (grâce à des labels).
 
-![Service IP](assets/img/Diapositive3.jpeg)
+![Service IP]({{site.baseurl}}/assets/img/Diapositive3.jpeg)
 
 ### Les grandes règles de la mise en réseau sous K8s
 Chaque Pod possède une adresse IP qui est partagée entre tous les containers qu’il possède.
@@ -65,11 +65,11 @@ Pour les gars réseau comme moi, cela s’apparente à une VRF.
 Un Network Namespace existe par défaut, le Root Network Namespace et est utilisé par l’OS de façon globale.
 Pour continuer avec les comparaisons dans le réseau « physique », cela peut nous faire penser à la GRT (Global Routing Table) sur un routeur.
 
-![Linux Root Network Namespace](assets/img/Diapositive4.jpeg)
+![Linux Root Network Namespace]({{site.baseurl}}/assets/img/Diapositive4.jpeg)
 
 La création d’un nouveau Network Namespace ajoute une instance spécifique, segmentée du Root Network Namespace, avec une interface Loopback, une table de routage et une table iptable.
 
-![Pod Network Namespace](assets/img/Diapositive5.jpeg)
+![Pod Network Namespace]({{site.baseurl}}/assets/img/Diapositive5.jpeg)
 
 #### Continuons avec les communications réseau dans Kubernetes.
 
@@ -78,7 +78,7 @@ Un Pod Kubernetes est un ensemble de containers qui partagent un Network Namespa
 Ces containers partagent donc la même POD-IP.
 Il est possible d’utiliser l’adresse Localhost comme destination pour les communications entre les containers du même Pod avec un port de transport différent pour chaque container.
 
-![Communication Container to Container dans un Pod](assets/img/Diapositive6.jpeg)
+![Communication Container to Container dans un Pod]({{site.baseurl}}/assets/img/Diapositive6.jpeg)
 
 ### Communication Pod à Pod
 Le Pod contient une IP réelle (POD-IP) et l’utilise pour pouvoir communiquer avec un autre Pod, qu’il soit sur le même Node, ou sur un Node différent dans le même cluster.
@@ -86,7 +86,7 @@ Cependant les adresses IP des Pods n’appartiennent pas au même Network Namesp
 Linux fournit une ressource, appelée Linux Virtual Ethernet Device ou veth, qui se compose d’une paire d’interfaces virtuelles. Ces deux interfaces virtuelles permettent de réaliser une connexion directe entre deux Network Namespaces (sous forme de Tunnel).
 Cette veth met en relation le Network Namespace du Pod et le Root Network Namespace.
 
-![Veth interfaces](assets/img/Diapositive7.jpeg)
+![Veth interfaces]({{site.baseurl}}/assets/img/Diapositive7.jpeg)
 
 Ok, tout va bien, un Pod A peut accéder au Root Network Namespace, et un Pod B peut y accéder également. Mais comment se fait la communication transitive entre le Pod A et le Pod B ?
 C’est ici qu’intervient le bridge. L’hôte Linux peut créer un Bridge entre les deux interfaces d’extrémité des veth coté Root Network Namespace correspondantes aux deux Pods.
