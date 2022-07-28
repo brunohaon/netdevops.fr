@@ -15,7 +15,7 @@ Retournons dans un premier temps sur les concepts de Kubernetes.
 Kubernetes est installé sur un Node possédant un OS Linux.
 Les Nodes possèdent une adresse IP accessible depuis le réseau physique. C’est l’adresse qui a été attribuée lors de l’installation de l’OS. Nous l’appellerons HOST-IP pour plus de facilité.
 
-![Interface Physique HOST IP](/assets/images/Diapositive1.jpeg)
+![Interface Physique HOST IP]({{site.static_files}}/Diapositive1.jpeg)
 
 Des ressources sont installées sur le Node, telles que des Workloads, des Services, des Volumes, etc…
 
