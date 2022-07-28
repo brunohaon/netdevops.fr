@@ -1,8 +1,2 @@
 theme: jekyll-theme-architect
 baseurl: /netdevops.fr/
-
-defaults:
-  - scope:
-      path: "assets/images"
-    values:
-      image: true
