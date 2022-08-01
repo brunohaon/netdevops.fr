@@ -15,6 +15,8 @@ Ainsi, il n’est pas nécessaire d’alimenter un fichier de variables, on dans
 L’arborescence reste la même que celle vue précédemment dans la partie 1.
 
 #### Contenu des fichiers
+
+```yaml
 #Working_dir/group_vars/access.yml
 ---
 
@@ -71,6 +73,7 @@ ACCESS2
 
 vlan {{ vid }}
  name {{ name }}
+```
 
 ### Fonctionnement
 Lorsque le playbook est lancé avec la commande ansible-playbook add_vlans.yml, un premier prompt apparaît « Inserez l’ID du VLAN a ajouter » (attention : Ansible rajoute automatiquement « : » à la fin du prompt), vous laissant la main pour taper une valeur.
@@ -85,11 +88,13 @@ Attention : par défaut le paramètre « private » est activé. Pour voir ce qu
 Le paramètre « default » permet d’attribuer une valeur par défaut à la variable du prompt. Cette valeur par défaut sera stockée si aucune entrée manuelle est faite.
 exemple:
 
+```yaml
 vars_prompt:
      - name: "vid"
        prompt: "Inserez l'ID du VLAN a ajouter"
        default: "1"
        private: no 
+```
 
 Il est aussi possible de chiffrer les valeurs entrées avec le paramètre « encrypt« , mais cela nécessite d’installer Passlib qui est une librairie Python pour « Hasher » du contenu.
 Plus d’information sur la documentation d’Ansible.

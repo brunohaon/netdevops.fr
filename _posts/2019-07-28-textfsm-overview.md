@@ -40,6 +40,7 @@ En corrélant toutes les listes des routeurs, je vais faire en sorte que mon scr
 
 Exemple pour une sortie « show ip bgp summary » sur un routeur:
 
+```bash
 BGP router identifier 192.0.2.70, local AS number 65550
 BGP table version is 9, main routing table version 9
 4 network entries using 468 bytes of memory
@@ -52,33 +53,38 @@ BGP table version is 9, main routing table version 9
 BGP using 1144 total bytes of memory
 BGP activity 12/4 prefixes, 12/4 paths, scan interval 5 secs
 
-`Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd`
-`192.0.2.77      4 65551    6965    1766        9    0    0  5w4d           1`
-`192.0.2.78      4 65552    6965    1766        9    0    0  5w4d          10`
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+192.0.2.77      4 65551    6965    1766        9    0    0  5w4d           1
+192.0.2.78      4 65552    6965    1766        9    0    0  5w4d          10
+```
 
 Avec le Template suivant :
 
-`# Permet de representer les titres des colones (RouterID, LocalAS,...)`
-`Value Filldown RouterID (\S+)`
-`Value Filldown LocalAS (\d+)`
-`Value RemoteAS (\d+)`
-`Value Required RemoteIP (\d+(\.\d+){3})`
-`Value Uptime (\d+\S+)`
-`Value Received_V4 (\d+)`
-`Value Status (\D.*)`
+```bash
+# Permet de representer les titres des colones (RouterID, LocalAS,...)
+Value Filldown RouterID (\S+)
+Value Filldown LocalAS (\d+)
+Value RemoteAS (\d+)
+Value Required RemoteIP (\d+(\.\d+){3})
+Value Uptime (\d+\S+)
+Value Received_V4 (\d+)
+Value Status (\D.*)
 
-`Start`
-  `^BGP router identifier ${RouterID}, local AS number ${LocalAS}`
-  `^${RemoteIP}\s+\d+\s+${RemoteAS}(\s+\S+){5}\s+${Uptime}\s+${Received_V4} -> Record`
-  `^${RemoteIP}\s+\d+\s+${RemoteAS}(\s+\S+){5}\s+${Uptime}\s+${Status} -> Record`
+Start
+  ^BGP router identifier ${RouterID}, local AS number ${LocalAS}
+  ^${RemoteIP}\s+\d+\s+${RemoteAS}(\s+\S+){5}\s+${Uptime}\s+${Received_V4} -> Record
+  ^${RemoteIP}\s+\d+\s+${RemoteAS}(\s+\S+){5}\s+${Uptime}\s+${Status} -> Record
 
-`# Last record is already recorded then skip doing so here.`
-`EOF`
+# Last record is already recorded then skip doing so here.
+EOF
+```
 
 Donnera une représentation tabulaire comme suit:
 
+```bash
 ['RouterID', 'LocalAS', 'RemoteAS', 'RemoteIP', 'Uptime', 'Received_V4', 'Status']
 ['192.0.2.70', '65550', '65551', '192.0.2.77', '5w4d', '1', '1']
 ['192.0.2.70', '65550', '65552', '192.0.2.78', '5w4d', '10', '10']
+```
 
 Plus de détails bientôt dans un article plus poussé. En attendant, de nombreux Templates sont déjà disponible sur la page GitHub de [Networktocode](https://github.com/networktocode/ntc-templates/tree/master/ntc_templates/templates).

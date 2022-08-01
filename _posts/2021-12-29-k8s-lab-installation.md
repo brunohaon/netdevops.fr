@@ -21,9 +21,11 @@ N’installez aucune extension, à part OpenSSH server.
 
 Une fois l’installation terminée, faite un Update/Upgrade et rebootez.
 
-`sudo apt update`
-`sudo apt upgrade`
-`reboot`
+```bash
+sudo apt update
+sudo apt upgrade
+reboot
+```
 
 ### Installation de Microk8s
 Pour installer Microk8s il suffit de copier la ligne ci-dessous:
@@ -32,18 +34,22 @@ sudo snap install microk8s –classic
 
 Lorsque l’installation est terminée, je vous suggère de rajouter deux alias dans le fichier .bashrc de votre répertoire HOME:
 
-`vim ~/.bashrc`
-    `# sous la ligne  alias l='ls -CF'`
-`alias k='sudo microk8s kubectl'`
-`alias kubectl='sudo microk8s kubectl'`
-`<esc>:wq`
+```bash
+vim ~/.bashrc
+    # sous la ligne  alias l='ls -CF'
+alias k='sudo microk8s kubectl'
+alias kubectl='sudo microk8s kubectl'
+<esc>:wq
+```
 
 à partir de maintenant vous pouvez utiliser la commande k à la place de kubectl dans le terminal linux.
 
 ### Installation des extensions
 MicroK8s est installé et pour que notre lab soit fonctionnel, il faut activer des add ons dans microk8s. Pour cela copiez la ligne ci-dessous:
 
-`sudo microk8s enable dns registry storage ingress`
+```bash
+sudo microk8s enable dns registry storage ingress
+```
 
 Nous expliquerons, plus tard dans chaque article tuto, à quoi servent ces add ons.
 

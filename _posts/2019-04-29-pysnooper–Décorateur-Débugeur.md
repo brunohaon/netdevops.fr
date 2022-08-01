@@ -10,25 +10,30 @@ Plus besoin de mettre un ‘Print’ à chaque ligne de votre programme, le déc
 
 ### Installation
 
-`pip install pysnooper`
+```bash
+pip install pysnooper
+```
 
 ### Exemple
 
 Le code suivant:
 
-`import pysnooper`
+```python
+import pysnooper
 
-`@pysnooper.snoop()`
-`def exposant2(valeur):`
-    `return valeur**2`
+@pysnooper.snoop()
+def exposant2(valeur):
+    return valeur**2
 
-`valeurs = [1, 3, 4, 6, 7, 8]`
+valeurs = [1, 3, 4, 6, 7, 8]
 
-`for valeur in valeurs:`
-    `exposant2(valeur)`
+for valeur in valeurs:
+    exposant2(valeur)
+```
 
 Affichera la sortie suivante:
-`
+
+```python
 Starting var:.. valeur = 1
 22:18:51.034947 call         4 def exposant2(valeur):
 22:18:51.035769 line         5     return valeur**2
@@ -59,7 +64,7 @@ Starting var:.. valeur = 8
 22:18:51.039045 line         5     return valeur**2
 22:18:51.039170 return       5     return valeur**2
 Return value:.. 64
-`
+```
 
 Un bon outil pour faciliter le debug Python et pour analyser, pas à pas, les différents appels de fonction. C’est donc aussi un outils d’apprentissage du fonctionnement de Python qui fera de vous un meilleur développeur.
 

@@ -27,10 +27,12 @@ Un template contient des variables et/ou des expressions, qui seront remplacés 
 
 Ci-dessous, un exemple minimaliste dont nous expliquerons les détails plus loin.
 
-`{# creation des vlans #}`
-`{% for vlanid in vlans %}`
-    `vlan {{ vlanid }}`
-`{% endfor %}`
+```bash
+{# creation des vlans #}
+{% for vlanid in vlans %}
+    vlan {{ vlanid }}
+{% endfor %}
+```
 
 Le langage possède les basiques suivants :
 
@@ -41,23 +43,32 @@ Le langage possède les basiques suivants :
 Dans l’exemple ci-dessus, le petit template Jinja2 possède un commentaire suivi d’une boucle FOR qui permet de générer la création de VLAN pour chaque VLAN ID trouvé dans un objet python créé dans l’application utilisant Jinja2.
 Dans l’exemple ci-dessous, on utilise une liste :
 
-`vlans =  [12, 13, 14]`
+```python
+vlans =  [12, 13, 14]
+```
 
 Les filtres
 Vous pouvez formater les variables grâce à des filtres existants dans l’application utilisant le templating Jinja2. Pour appliquer un filtre, il suffit de mettre un Pipe (« | ») après la variable suivit du filtre à appliquer.
 Dans l’exemple ci-dessous, on définit une valeur par défaut pour l’ID de VLAN Natif, ainsi si le template ne trouve aucune variable, il utilisera la valeur par défaut.
 
-`vlan {{ id_native_vlan|défaut ('99') }}`
+```bash
+vlan {{ id_native_vlan|défaut ('99') }}
+```
 
 On peut utiliser Jinja2 directement comme Bibliothèque Python en l’installant avec PIP:On peut utiliser Jinja2 directement comme Bibliothèque Python en l’installant avec PIP:
 
-`pip install Jinja2`
+```bash
+pip install Jinja2
+```
 
 Puis en l’utilisant comme dans l’exemple suivant:
 
-`from jinja2 import Template` 
-`template = Template('{% for vlan in vlans %}vlan {{ vlan }} {% endfor %}')`
-`template.render(vlans=[1, 2, 3, 4, 5, 6])` 
-`u'vlan 1 vlan 2 vlan 3 vlan 4 vlan 5 vlan 6'`
+```python
+from jinja2 import Template
+
+template = Template('{% for vlan in vlans %}vlan {{ vlan }} {% endfor %}')
+template.render(vlans=[1, 2, 3, 4, 5, 6])
+u'vlan 1 vlan 2 vlan 3 vlan 4 vlan 5 vlan 6'
+```
 
 Ansible utilise Jinja2 comme langage de Templating, il intègre des filtres très intéressants pour la pratique du NetDevOps tels que "ipaddress" …

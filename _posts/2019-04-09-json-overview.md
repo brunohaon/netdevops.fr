@@ -13,13 +13,15 @@ Les valeurs peuvent être de tout type, comme des listes, des entiers, des chain
 
 Exemple :
 
-`{`
-        `"vlans": [`
-              `{ "id": 1, "name": "native" },`
-              `{ "id": 2, "name": "data"},`
-              `{ "id": 3, "name": "voice"}`
-        `]`
-`}`
+```json
+{
+      "vlans": [
+            { "id": 1, "name": "native" },
+            { "id": 2, "name": "data"},
+            { "id": 3, "name": "voice"}
+      ]
+}
+```
 
 
 

@@ -16,6 +16,7 @@ Uage sans vars-prompt
 Sans la fonctionnalité vars-prompt, il faudrait mettre dans un des fichiers de variables, la liste des VLAN devant être créés, avec l’ensemble des attributs d’un VLAN (ID, NOM, IP, etc…).
 
 ### Arborescence
+```bash
 Working_dir
 |_group_vars
   |_access.yml
@@ -30,12 +31,14 @@ Working_dir
 |_ansible.cfg
 |_add_vlans.yml
 |_hosts
+```
 
 ### Contenu des fichiers
 
-`#Working_dir/group_vars/access.yml`
-`---`
-`
+```yaml
+#Working_dir/group_vars/access.yml
+---
+
 provider:
   host: "{{ ansible_host }}"
   username: "admin"
@@ -89,7 +92,7 @@ ACCESS2
 vlan {{ vlan['vid'] }}
  name {{ vlan['name'] }}
 {% endfor %}
-`
+```
 
 ### Fonctionnement
 Pour lancer le Playbook, il suffit de taper la commande :
