@@ -1,6 +1,6 @@
 ---
 title:  "YAML Overview !"
-categories: Formats de sérialisation de données
+categories: "Formats de sérialisation de données"
 ---
 
 ## YAML Overview !

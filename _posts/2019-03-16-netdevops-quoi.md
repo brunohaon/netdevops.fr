@@ -1,6 +1,6 @@
 ---
 title:  "NetDevOps, Quoi??"
-categories: Définitions 
+categories: "Définitions" 
 ---
 
 ## NetDevOps, Quoi??

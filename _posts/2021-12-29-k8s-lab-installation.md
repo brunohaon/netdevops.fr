@@ -1,6 +1,6 @@
 ---
 title:  "K8S - Installation du Lab"
-categories: Kubernetes
+categories: "Kubernetes"
 ---
 
 ## K8S - Installation du Lab
