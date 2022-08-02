@@ -1,5 +1,6 @@
 ---
 title:  "Le Réseau dans K8S - partie 1"
+categories: Kubernetes
 ---
 
 ## K8S - Le Réseau dans K8S - partie 1

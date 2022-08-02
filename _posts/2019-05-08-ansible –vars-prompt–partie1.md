@@ -1,5 +1,6 @@
 ---
 title:  "Ansible – vars-prompt – Partie 1"
+categories: Outils
 ---
 
 ## Ansible – vars-prompt – Partie 1

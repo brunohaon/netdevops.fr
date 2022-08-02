@@ -1,5 +1,6 @@
 ---
 title:  "JSON Overview !"
+categories: Formats de sérialisation de données
 ---
 
 ## JSON Overview !

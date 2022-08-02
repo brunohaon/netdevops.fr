@@ -1,5 +1,6 @@
 ---
 title:  "K8S - Les Namespaces"
+categories: Kubernetes
 ---
 
 ## K8S - Les Namespaces

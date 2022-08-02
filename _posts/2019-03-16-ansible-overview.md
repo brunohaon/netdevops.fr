@@ -1,6 +1,6 @@
 ---
 title:  "Ansible Overview !"
-categories: Automatisation
+categories: Outils
 ---
 
 ## Ansible Overview

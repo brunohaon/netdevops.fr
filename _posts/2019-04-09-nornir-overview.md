@@ -1,5 +1,6 @@
 ---
 title:  "Nornir Overview !"
+categories: Librairies Python
 ---
 
 ## Nornir Overview !
