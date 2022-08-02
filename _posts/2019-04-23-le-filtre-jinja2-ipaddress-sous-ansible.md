@@ -1,6 +1,6 @@
 ---
 title:  "Le filtre 'ip address' de Jinja 2 sous Ansible"
-categories: "Moteurs de template"
+categories: "Moteurs_de_template"
 ---
 
 ## Le filtre 'ip address' de Jinja 2 sous Ansible

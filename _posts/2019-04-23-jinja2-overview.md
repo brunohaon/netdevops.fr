@@ -1,6 +1,6 @@
 ---
 title:  "Jinja2 Overview !"
-categories: "Moteurs de template"
+categories: "Moteurs_de_template"
 ---
 
 ## Jinja2 Overview !

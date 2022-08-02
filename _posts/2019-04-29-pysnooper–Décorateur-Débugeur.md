@@ -1,6 +1,6 @@
 ---
 title:  "PySnooper – Décorateur Débugeur"
-categories: "Librairies Python"
+categories: "Librairies_python"
 ---
 
 ## PySnooper – Décorateur Débugeur

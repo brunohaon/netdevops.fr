@@ -1,6 +1,6 @@
 ---
 title:  "Nornir Overview !"
-categories: "Librairies Python"
+categories: "Librairies_python"
 ---
 
 ## Nornir Overview !
