@@ -2,3 +2,18 @@ title: [NetDevOps.fr]
 description: [Un site de partage de connaissances sur les sujets DevOps Réseaux et automatisation des infrastructures IT.]
 theme: jekyll-theme-architect
 google_analytics: [UA-139305732-1]
+
+# Liste des catégories
+collections:
+  category:
+    output: true # générer la page HTML
+    permalink: /:collection/:name/index.html
+    # exemple -> /category/informatique/index.html
+
+defaults:
+  - scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
+      # layout utilisé -> _layouts/category.html
