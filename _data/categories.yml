@@ -1,2 +1,8 @@
 - name: Outils
   file: outils
+
+- name: Formats de Sérialisation de Données
+  file: Formats_de_sérialisation_de_données
+
+- name: Définitions
+  file: definition
