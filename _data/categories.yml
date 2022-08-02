@@ -2,7 +2,16 @@
   file: outils
 
 - name: Formats de Sérialisation de Données
-  file: Formats_de_sérialisation_de_données
+  file: formats_de_sérialisation_de_données
 
 - name: Définitions
-  file: definition
+  file: definitions
+
+- name: Librairies Python
+  file: librairies_python
+
+- name: Moteurs de Template
+  file: moteurs_de_template
+
+- name: Kubernetes
+  file: kubernetes
