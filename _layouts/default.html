@@ -39,6 +39,17 @@
         </section>
 
         <aside id="sidebar">
+          <p>Categories:</p>
+            <ul>
+              {% for category in site.data.categories %}
+              <li>
+                  <a href="/category/{{ category.file | slugify }}">
+                      {{ category.name }}
+                  </a>
+              </li>
+              {% endfor %}
+            </ul>
+          <p>Posts:</p>
             <ul>
                 {% for post in site.posts %}
                   <li>
