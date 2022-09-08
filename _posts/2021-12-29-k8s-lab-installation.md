@@ -31,7 +31,9 @@ reboot
 ### Installation de Microk8s
 Pour installer Microk8s il suffit de copier la ligne ci-dessous:
 
+```bash
 sudo snap install microk8s –classic
+```
 
 Lorsque l’installation est terminée, je vous suggère de rajouter deux alias dans le fichier .bashrc de votre répertoire HOME:
 
